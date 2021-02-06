@@ -18,7 +18,9 @@ Here you will erase all the partitions that the disk has and it will only create
 
 Proceed to format and mount and install the programs.
 
-`(echo o; echo n; echo p; echo 1; echo ""; echo "";  echo a; echo w) | fdisk /dev/sdX ; mkfs.ext4 /dev/sdX1 ;  mount /dev/sdX1  /mnt  ;  pacstrap /mnt base linux grub nano reflector python rsync neofetch networkmanager dhcpcd`
+```
+(echo o; echo n; echo p; echo 1; echo ""; echo "";  echo a; echo w) | fdisk /dev/sdX ; mkfs.ext4 /dev/sdX1 ;  mount /dev/sdX1  /mnt  ;  pacstrap /mnt base linux grub nano reflector python rsync neofetch networkmanager dhcpcd
+```
 
 **Step 2**
 
@@ -28,7 +30,9 @@ install grub with its configuration file for later
 
 create root password and finally reboot.
 
-`genfstab -U /mnt > /mnt/etc/fstab ; arch-chroot /mnt /bin/bash -c "systemctl enable --now NetworkManager dhcpcd ; reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist ; grub-install /dev/sdX ;  grub-mkconfig -o /boot/grub/grub.cfg ;  (echo Clave123 ; echo Clave123) | passwd root " ;  reboot`
+```
+genfstab -U /mnt > /mnt/etc/fstab ; arch-chroot /mnt /bin/bash -c "systemctl enable --now NetworkManager dhcpcd ; reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist ; grub-install /dev/sdX ;  grub-mkconfig -o /boot/grub/grub.cfg ;  (echo Clave123 ; echo Clave123) | passwd root " ;  reboot
+```
 
 Demonstration video: https://youtu.be/mRa-OO_3Ewo
 
@@ -63,7 +67,9 @@ Aquí borrará todas las particiones que tiene el disco y solo creará una parti
 
 Procede a formatear y montar e instalar los programas.
 
-`(echo o; echo n; echo p; echo 1; echo ""; echo "";  echo a; echo w) | fdisk /dev/sdX ; mkfs.ext4 /dev/sdX1 ;  mount /dev/sdX1  /mnt  ;  pacstrap /mnt base linux grub nano reflector python rsync neofetch networkmanager dhcpcd`
+```
+(echo o; echo n; echo p; echo 1; echo ""; echo "";  echo a; echo w) | fdisk /dev/sdX ; mkfs.ext4 /dev/sdX1 ;  mount /dev/sdX1  /mnt  ;  pacstrap /mnt base linux grub nano reflector python rsync neofetch networkmanager dhcpcd
+```
 
 **Paso 2**
 
@@ -73,7 +79,9 @@ instala grub con su archivo de configuración para luego
 
 crear la contraseña de root y finalmente reiniciar.
 
-`genfstab -U /mnt > /mnt/etc/fstab ; arch-chroot /mnt /bin/bash -c "systemctl enable --now NetworkManager dhcpcd ; reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist ; grub-install /dev/sdX ;  grub-mkconfig -o /boot/grub/grub.cfg ;  (echo Clave123 ; echo Clave123) | passwd root " ;  reboot`
+```
+genfstab -U /mnt > /mnt/etc/fstab ; arch-chroot /mnt /bin/bash -c "systemctl enable --now NetworkManager dhcpcd ; reflector --verbose --latest 10 --sort rate --save /etc/pacman.d/mirrorlist ; grub-install /dev/sdX ;  grub-mkconfig -o /boot/grub/grub.cfg ;  (echo Clave123 ; echo Clave123) | passwd root " ;  reboot
+```
 
 Video demostrativo: https://youtu.be/mRa-OO_3Ewo
 
