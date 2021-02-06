@@ -7,7 +7,9 @@ Primero debemos tener nuestro teclado en nuestro idioma bien en español o para 
 `loadkeys la-latin1`
 
 Luego debemos identificar cual es nuestro disco principal, lo podemos ver con el siguiente comando:
+
 `fdisk -l`
+
 ```
 /dev/sdX    > nombre de disco
 
