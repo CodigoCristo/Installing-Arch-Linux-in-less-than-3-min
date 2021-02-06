@@ -3,15 +3,16 @@
 Primero debemos tener nuestro teclado en nuestro idioma bien en español o para latinoamericanos
 
 `loadkeys es`
+
 `loadkeys la-latin1`
 
 Luego debemos identificar cual es nuestro disco principal, lo podemos ver con el siguiente comando:
 `fdisk -l`
-
+```
 /dev/sdX    > nombre de disco
 
 /dev/sdX1   > nombre de partición
-
+```
 
 Ahora ejecutemos los dos pasos.
 
