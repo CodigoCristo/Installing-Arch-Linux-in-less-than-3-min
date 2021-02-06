@@ -1,4 +1,4 @@
-#Instalar Arch en dos pasos
+# Instalar Arch en dos pasos
 
 Primero debemos tener nuestro teclado en nuestro idioma bien en español o para latinoamericanos
 
